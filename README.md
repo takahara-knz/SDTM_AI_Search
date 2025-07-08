@@ -1,2 +1,2 @@
 # SDTM_AI_Search
-Web Applications
+python で作った CDISC/SDTM のいろいろな検索アプリを載せていきます。
