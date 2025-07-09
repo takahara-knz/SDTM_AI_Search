@@ -5,6 +5,7 @@
 現在は、SDTM Terminologyの、Findings ドメインの `xxTESTCD` / `xxTEST` を対象に、  
 **日本語・英語のキーワードで検索・類似語探索ができるWebアプリ**だけです。  
 Streamlit を使って構築されており、**インストール不要・ブラウザだけで利用可能**です。
+
 コードは全部copilotさんが書いてくれました。私はpython書けません。
 
 ---
