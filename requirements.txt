@@ -1,5 +1,5 @@
-streamlit
-pandas
-openpyxl
-scikit-learn
-st-aggrid
+streamlit==1.35.0
+pandas==2.2.2
+openpyxl==3.1.2
+scikit-learn==1.4.2
+st-aggrid==0.3.4
