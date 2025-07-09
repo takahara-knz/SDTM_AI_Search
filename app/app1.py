@@ -12,8 +12,6 @@ def run():
     try:
         df = pd.read_excel("data/00.TerminologyMerge.xlsx")
         df.columns = df.columns.str.strip()  # 列名の前後の空白を除去
-        st.success("✅ データ読み込み成功")
-        st.write("📋 読み込んだ列名一覧:", df.columns.tolist())
     except Exception as e:
         st.error(f"❌ データ読み込みエラー: {e}")
         return
