@@ -11,7 +11,7 @@ st.sidebar.title("📚 おしえてねこちゃんメニュー")
 #])
 
 #if app_choice == "xxTESTCD/xxTEST検索（Findings系ドメイン検索）":
-    app1.run()
+    app2.run()
 #elif app_choice == "機能2（準備中）":
 #    app2.run()
 #elif app_choice == "機能3（準備中）":
