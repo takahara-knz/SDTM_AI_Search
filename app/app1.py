@@ -1,16 +1,22 @@
 def run():
     try:
         st.title("CDISC Terminology 検索ツール（xxTEST 系）")
+        st.write("✅ タイトル表示完了")
+
 
         @st.cache_data
         def load_data():
+            st.write("📥 データ読み込み開始")
             return pd.read_excel("data/00.TerminologyMerge.xlsx")
 
         df = load_data()
+        st.write("✅ データ読み込み完了")
 
         search_word = st.text_input("🔍 検索ワードを入力してください（例：ヘモグロビン、QT間隔 など）")
+        st.write(f"🔎 入力された検索語: {search_word}")
 
         if search_word:
+            st.write("🔍 検索処理開始")
             mask = df.apply(lambda row: row.astype(str).str.contains(search_word, case=False, na=False).any(), axis=1)
             results = df[mask].reset_index(drop=True)
             st.write(f"🔎 検索結果：{len(results)} 件ヒットしました")
