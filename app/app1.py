@@ -19,6 +19,7 @@ def run():
     # 類似度スコアで並べ替える関数
     def filter_by_similarity(df, keyword, top_n=None):
         texts = (
+            df["xxTESTCD"].fillna("") + " " +
             df["xxTEST"].fillna("") + " " +
             df["xxTEST-J"].fillna("")
         )
