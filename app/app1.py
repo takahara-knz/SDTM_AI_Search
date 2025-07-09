@@ -9,9 +9,10 @@ def run():
     # タイトル
     st.title("CDISC Terminology 検索ツール（xxTEST 系）")
 
-    # データ読み込み（キャッシュ付き）
-    @st.cache_data
-    def load_data():
+    try:
         df = pd.read_excel("data/00.TerminologyMerge.xlsx")
+        st.success("✅ データ読み込み成功")
         st.write("📋 読み込んだ列名一覧:", df.columns.tolist())
-        return df
+    except Exception as e:
+        st.error(f"❌ データ読み込みエラー: {e}")
+        return
