@@ -1,5 +1,1 @@
 streamlit
-pandas
-openpyxl
-scikit-learn
-st-aggrid
