@@ -7,7 +7,12 @@ def run():
         @st.cache_data
         def load_data():
             st.write("📥 データ読み込み開始")
-            return pd.read_excel("data/00.TerminologyMerge.xlsx")
+#            return pd.read_excel("data/00.TerminologyMerge.xlsx")
+            df = pd.read_excel("data/00.TerminologyMerge.xlsx")
+            st.success("✅ データ読み込み成功")
+        except Exception as e:
+            st.error(f"❌ データ読み込みエラー: {e}")
+            return
 
         df = load_data()
         st.write("✅ データ読み込み完了")
