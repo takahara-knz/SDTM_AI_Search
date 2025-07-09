@@ -55,8 +55,7 @@ def run():
         results = results[display_columns]
 
         # 表の表示
-        # st.dataframe(results, use_container_width=True) #←行番号が表示されてしまう
-        st.table(results.style.hide(axis="index"))
+        st.dataframe(results, use_container_width=True)
 
     else:
         st.info("🔍 上のテキストボックスに検索語を入力してください。例：ヘモグロビン、QT間隔、ALT など")
