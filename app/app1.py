@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from st_aggrid import AgGrid, GridOptionsBuilder
+# from st_aggrid import AgGrid, GridOptionsBuilder
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -57,20 +57,23 @@ def run():
         ]
         display_columns = [col for col in preferred_columns if col in results.columns]
         results = results[display_columns]
+        
+  # st-aggrid が streamlit Cloud でエラーになるので、代わりに st.dataframe()を使う
+  #      # AgGrid 設定
+  #      gb = GridOptionsBuilder.from_dataframe(results)
+  #      gb.configure_default_column(resizable=True, filter=True, sortable=True)
+  #      for col in ["Domain", "xxTESTCD", "xxTEST"]:
+  #          if col in results.columns:
+  #              gb.configure_column(col, pinned="left")
+  #      grid_options = gb.build()
 
-        # AgGrid 設定
-        gb = GridOptionsBuilder.from_dataframe(results)
-        gb.configure_default_column(resizable=True, filter=True, sortable=True)
-        for col in ["Domain", "xxTESTCD", "xxTEST"]:
-            if col in results.columns:
-                gb.configure_column(col, pinned="left")
-        grid_options = gb.build()
-
-        # 表の表示（高さは固定）
-        AgGrid(
-            results,
-            gridOptions=grid_options,
-            height=400,
-            fit_columns_on_grid_load=False,
-            theme="streamlit"
-        )
+  #      # 表の表示（高さは固定）
+  #      AgGrid(
+  #          results,
+  #          gridOptions=grid_options,
+  #          height=400,
+  #          fit_columns_on_grid_load=False,
+  #          theme="streamlit"
+  #      )
+        # 表の表示（AgGridの代わりに）
+        st.dataframe(results, use_container_width=True)
