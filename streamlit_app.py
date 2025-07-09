@@ -1,4 +1,6 @@
 import streamlit as st
+st.set_page_config(layout="wide") # ページ設定（ワイド表示）
+
 from app import app1  # 今は app1 のみ
 
 st.sidebar.title("📚 おしえてねこちゃんメニュー")
