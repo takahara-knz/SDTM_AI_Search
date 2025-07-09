@@ -59,4 +59,4 @@ def run():
         st.dataframe(results, use_container_width=True)
 
     else:
-        st.info("🔍 上のテキストボックスに検索語を入力してください。例：ALT、QT間隔、ヘモグロビン など")
+        st.info("🔍 上のテキストボックスに検索語を入力してください。例：ヘモグロビン、QT間隔、ALT など")
