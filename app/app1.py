@@ -31,7 +31,7 @@ def run():
                 st.write("🎯 類似度の高い順に並べ替えました")
 
             preferred_columns = [
-                "Domain", "xxTESTCD", "xxTEST",
+                "Domain", "Code", "xxTESTCD", "xxTEST",
                 "xxTEST-J", "CDISC Synonym(s)-J", "CDISC Definition-J", "NCI Preferred Term-J",
                 "CDISC Synonym(s)", "CDISC Definition", "NCI Preferred Term"
             ]
