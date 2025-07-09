@@ -12,5 +12,6 @@ def run():
     # データ読み込み（キャッシュ付き）
     @st.cache_data
     def load_data():
-        return pd.read_excel("data/00.TerminologyMerge.xlsx")
+        df = pd.read_excel("data/00.TerminologyMerge.xlsx")
         st.write("📋 読み込んだ列名一覧:", df.columns.tolist())
+        return df
