@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 # ✅ アプリ本体
 def run():
     # タイトル
-    st.title("CDISC Terminology 検索ツール（xxTEST 系）")
+    st.title("🐾おしえてねこちゃん🐾CDISC Terminology 検索ツール（xxTEST系）")
 
     # データ読み込み（キャッシュなしでエラー表示あり）
     try:
