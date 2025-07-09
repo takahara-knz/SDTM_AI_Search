@@ -2,4 +2,3 @@ streamlit
 pandas
 openpyxl
 scikit-learn
-st-aggrid==0.2.3
