@@ -7,7 +7,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 # ✅ アプリ本体
 def run():
     # ページ設定（ワイド表示）
-    st.set_page_config(layout="wide")
+    # st.set_page_config(layout="wide")
 
     # タイトル
     st.title("CDISC Terminology 検索ツール（xxTEST 系）")
