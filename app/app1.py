@@ -49,8 +49,7 @@ def run():
         # 表示する列の順番を指定
         preferred_columns = [
             "Domain", "Code", "xxTESTCD", "xxTEST",
-            "xxTEST-J", "CDISC Synonym(s)-J", "CDISC Definition-J", "NCI Preferred Term-J",
-            "CDISC Synonym(s)", "CDISC Definition", "NCI Preferred Term"
+            "xxTEST-J", "CDISC Synonym(s)-J", "CDISC Definition-J", "NCI Preferred Term-J"
         ]
         display_columns = [col for col in preferred_columns if col in results.columns]
         results = results[display_columns]
