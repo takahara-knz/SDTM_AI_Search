@@ -10,8 +10,8 @@ Streamlit を使って構築されており、**インストール不要・ブ�
 
 ## 🚀 アプリを使う
 
-▶️ Webアプリはこちら（Streamlit Cloud）  
-👷工事中👷すみません
+▶️ Webアプリはこちら（Streamlit Cloud） 👷ただいま工事中デス👷 
+https://sdtmaisearch.streamlit.app/
 
 ---
 
