@@ -24,7 +24,7 @@ def filter_by_similarity(df, keyword, top_n=None):
 def run():
     st.title("おしえてねこちゃん：CDISC Terminology 検索ツール（xxTEST系）")
 
-    # 🔹 データ読み込み（エラー表示付き）
+    # 🔹 データ読み込み
     try:
         df = pd.read_excel("data/00.TerminologyMerge.xlsx")
         df.columns = df.columns.str.strip()
@@ -32,11 +32,7 @@ def run():
         st.error(f"❌ データ読み込みエラー: {e}")
         return
 
-    # ✅ セッションステートでソート状態を記憶
-    if "sort_by_similarity" not in st.session_state:
-        st.session_state.sort_by_similarity = False
-
-    # 🔎 検索語の入力
+    # 🔍 検索語入力
     search_word = st.text_input("🔍 検索ワードを入力してください（例：ヘモグロビン、QT間隔、ALT など）")
 
     if search_word:
@@ -45,23 +41,21 @@ def run():
         results = df[mask].reset_index(drop=True)
         st.write(f"🔎 検索結果：{len(results)} 件ヒットしました")
 
-        # ✅ 横並びでボタン＋状態表示
+        # ✅ ソートボタン＋説明文を横並び表示
         col1, col2 = st.columns([1, 5])
         with col1:
-            if st.button("🔘 類似度の高い順にソート"):
-                st.session_state.sort_by_similarity = True
-
+            sort_trigger = st.button("🔘 類似度の高い順にソート")
         with col2:
-            if st.session_state.sort_by_similarity:
-                st.markdown("✅ 現在は類似度の高い順で並べています")
+            if sort_trigger:
+                st.markdown("✅ 類似度順で表示しています")
             else:
-                st.markdown("📝 現在はABC順です。このボタンを押すと類似度順に並び替えできます")
+                st.markdown("📝 現在はABC順です。このボタンを押すと類似度順に並べ替えできます")
 
-        # ✅ ソートの実行
-        if st.session_state.sort_by_similarity:
+        # ✅ 類似度ソート実行
+        if sort_trigger:
             results = filter_by_similarity(results, search_word)
 
-        # 🔹 表示列の指定（存在する列のみ表示）
+        # 🔹 表示列の順番調整
         preferred_columns = [
             "Domain", "Code", "xxTESTCD", "xxTEST",
             "xxTEST-J", "CDISC Synonym(s)-J", "CDISC Definition-J", "NCI Preferred Term-J",
@@ -73,6 +67,6 @@ def run():
     else:
         st.info("🔍 上のテキストボックスに検索語を入力してください。例：ヘモグロビン、QT間隔、ALT など")
 
-# ✅ 実行
+# ✅ アプリ実行
 if __name__ == "__main__":
     run()
