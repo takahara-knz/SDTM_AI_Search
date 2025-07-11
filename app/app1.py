@@ -49,7 +49,7 @@ def run():
             if sort_trigger:
                 st.markdown("✅ 類似度順で表示しています")
             elif search_word:
-                st.markdown("📝 現在はABC順です。このボタンを押すと類似度順に並べ替えできます")
+                st.markdown("📝 現在はABC順です。←のボタンを押すと類似度順に並べ替えできます")
 
         # ✅ 類似度ソート実行
         if sort_trigger:
