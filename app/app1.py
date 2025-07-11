@@ -44,7 +44,7 @@ def run():
         # ✅ ソートボタン＋説明文を横並び表示
         col1, col2 = st.columns([1, 5])
         with col1:
-            sort_trigger = st.button("🔘 類似度の高い順にソート")
+            sort_trigger = st.button("🔘 類似度順に並び替え")
         with col2:
             if sort_trigger:
                 st.markdown("✅ 類似度順で表示しています")
