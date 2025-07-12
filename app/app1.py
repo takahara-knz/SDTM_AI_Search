@@ -21,7 +21,7 @@ def filter_by_similarity(df, keyword, top_n=None):
         return df.sort_values("類似度スコア", ascending=False)
 
 # ✅ アプリ本体
-def run():
+def run_app():
     st.title("おしえてねこちゃん：CDISC Terminology 検索ツール（xxTEST系）")
 
     # 🔹 データ読み込み
