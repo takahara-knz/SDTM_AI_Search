@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import os
 
 def run_app():
     st.title("さがしてねこちゃん: ドメイン検索")
