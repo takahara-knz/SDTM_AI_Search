@@ -22,7 +22,7 @@ def filter_by_similarity(df, keyword, top_n=None):
 
 # ✅ アプリ本体
 def run_app():
-    st.title("おしえてねこちゃん：CDISC Terminology 検索ツール（xxTEST系）")
+    st.title("さがしてねこちゃん：CDISC Terminology 検索ツール（xxTEST系）")
 
     # 🔹 データ読み込み
     try:
