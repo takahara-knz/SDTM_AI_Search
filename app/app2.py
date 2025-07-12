@@ -4,10 +4,14 @@ import pandas as pd
 def run_app():
     st.title("さがしてねこちゃん: ドメイン検索")
 
-    # ✅ 辞書読み込み（dataフォルダから）
+    # 📘 dataフォルダの辞書パスを安全に取得！
+    current_dir = os.path.dirname(__file__)
+    dic_path = os.path.join(current_dir, "..", "data", "NekoDic.xlsx")
+
+    # ✅ 読み込み
     @st.cache_data
     def load_dictionary():
-        return pd.read_excel("data/NekoDic.xlsx")
+        return pd.read_excel(dic_path)
 
     dic = load_dictionary()
 
