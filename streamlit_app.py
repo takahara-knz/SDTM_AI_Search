@@ -1,19 +1,30 @@
 import streamlit as st
-st.set_page_config(layout="wide") # ページ設定（ワイド表示）
+import app1
+import app2
 
-from app import app1  # 今は app1 のみ
-app1.run()
+def main():
+    st.set_page_config(page_title="おしえてねこちゃんメニュー", layout="wide")
 
-# st.sidebar.title("📚 おしえてねこちゃんメニュー")
-#app_choice = st.sidebar.radio("機能を選択してください", [
-#    "xxTESTCD/xxTEST検索（Findings系ドメイン検索）",
-#    "機能2（準備中）",
-#    "機能3（準備中）"
-#])
+    # ✅ 画面状態をセッションで保存
+    if "selected_app" not in st.session_state:
+        st.session_state["selected_app"] = "menu"
 
-#if app_choice == "xxTESTCD/xxTEST検索（Findings系ドメイン検索）":
-#    app1.run()
-#elif app_choice == "機能2（準備中）":
-#    app2.run()
-#elif app_choice == "機能3（準備中）":
-#    app3.run()
+    # ✅ 表示制御
+    if st.session_state["selected_app"] == "menu":
+        st.title("おしえてねこちゃんメニュー🐾")
+        option = st.radio("検索メニューを選択してください", ["1️⃣ xxTEST検索", "2️⃣ ドメイン検索", "3️⃣ よろず検索（永遠に工事中）"])
+        if st.button("スタート！"):
+            if "xxTEST" in option:
+                st.session_state["selected_app"] = "app1"
+            elif "ドメイン" in option:
+                st.session_state["selected_app"] = "app2"
+            else:
+                st.info("よろず検索は永遠に工事中です…👷")
+    
+    elif st.session_state["selected_app"] == "app1":
+        app1.run_app() 
+
+    elif st.session_state["selected_app"] == "app2":
+        app2.run_app() 
+
+main()
