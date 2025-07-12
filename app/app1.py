@@ -69,7 +69,7 @@ def run_app():
 
     if st.button("← メニューに戻る"):
         st.session_state["selected_app"] = "menu"
-        st.experimental_rerun()  # ← 状態更新した直後に再描画！
+        # st.experimental_rerun()  # ← 状態更新した直後に再描画！
 
 # ✅ アプリ実行
 if __name__ == "__main__":
