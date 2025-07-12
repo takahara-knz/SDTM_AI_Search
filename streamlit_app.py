@@ -19,7 +19,8 @@ def main():
                 st.session_state["selected_app"] = "app2"
             else:
                 st.info("よろず検索は永遠に工事中です…👷")
-    
+            st.experimental_rerun()  # ← 状態更新した直後に再描画！
+
     elif st.session_state["selected_app"] == "app1":
         app1.run_app()
 
