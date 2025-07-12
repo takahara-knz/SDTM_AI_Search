@@ -9,10 +9,6 @@ def run_app():
     current_dir = os.path.dirname(__file__)
     dic_path = os.path.join(current_dir, "..", "data", "NekoDic.xlsx")
 
-    # デバッグ用に一時的に追加してみてね！
-    st.write("読み込もうとしてるファイルパス：", dic_path)
-    st.write("存在してる？：", os.path.exists(dic_path))
-
     # ✅ 読み込み
     @st.cache_data
     def load_dictionary():
