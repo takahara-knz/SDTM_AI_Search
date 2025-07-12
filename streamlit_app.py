@@ -21,9 +21,12 @@ def main():
                 st.info("よろず検索は永遠に工事中です…👷")
     
     elif st.session_state["selected_app"] == "app1":
-        app1.run_app() 
+        app1.run_app()
 
     elif st.session_state["selected_app"] == "app2":
-        app2.run_app() 
+        app2.run_app()
+
+    elif st.session_state["selected_app"] == "app3":
+        st.info("ごめんニャ〜！よろず検索は永遠に工事中")
 
 main()
