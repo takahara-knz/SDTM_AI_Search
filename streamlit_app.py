@@ -11,9 +11,9 @@ def main():
     # ✅ 表示制御
     if st.session_state["selected_app"] == "menu":
         st.title("おしえてねこちゃんメニュー🐾")
-        option = st.radio("検索メニューを選択してください", ["1️⃣ xxTEST検索", "2️⃣ ドメイン検索（テスト中なので嘘を言うかも）", "3️⃣ よろず検索（永遠に工事中）"])
+        option = st.radio("検索メニューを選択してください", ["1️⃣ Findings系(xxTESTCD&xxTEST)検索", "2️⃣ ドメイン検索（テスト中なので嘘を言うかも）", "3️⃣ よろず検索（永遠に工事中）"])
         if st.button("スタート！"):
-            if "xxTEST" in option:
+            if "Findings系" in option:
                 st.session_state["selected_app"] = "app1"
             elif "ドメイン" in option:
                 st.session_state["selected_app"] = "app2"
