@@ -9,9 +9,7 @@ def run_app():
     # dataのパスを取得
     current_dir = os.path.dirname(__file__)
     excel_path = os.path.join(current_dir, "..", "data", "sdtmig_v3.3_tables_和訳付き.xlsx")
-    # excel_path = "/mount/src/sdtm_ai_search/data/sdtmig_v3.3_tables_和訳付き.xlsx"
-    st.write("Excelファイルのパス:", excel_path)
-    st.write("このファイル存在する？", os.path.exists(excel_path))
+
     # Excelファイルからシートごとに読み込む
     table0_df = pd.read_excel(excel_path, sheet_name="Table0")
     table1_df = pd.read_excel(excel_path, sheet_name="Table1")
