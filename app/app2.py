@@ -7,7 +7,7 @@ def run_app():
 
     # 📘 dataフォルダの辞書パスを安全に取得！
     current_dir = os.path.dirname(__file__)
-    dic_path = os.path.join(current_dir, "..", "data", "NekoDic.xlsx")
+    dic_path = os.path.join(current_dir, "..", "data", "NekoDic2.xlsx")
 
     # ✅ 読み込み
     @st.cache_data
