@@ -15,7 +15,7 @@ def main():
         st.title("おしえてねこちゃんメニュー🐾")
         st.write("※和訳はGoogle翻訳で、公式なものではありません")
         st.write("※ボタンを押しても動かない場合は、もう１回押してください")
-        option = st.radio("検索メニューを選択してください", ["1️⃣ Findings系(xxTESTCD&xxTEST)検索", "2️⃣ ドメイン検索（テスト中なので嘘を言うかも）", "3️⃣ ドメイン概要表示(SDTMIG V3.3)", "👷 よろず検索（永遠に工事中）"])
+        option = st.radio("検索メニューを選択してください", ["1️⃣ Findings系(xxTESTCD&xxTEST)検索", "2️⃣ ドメイン検索（テスト中なので嘘を言うかも）", "3️⃣ ドメイン概要表示（SDTMIG V3.3）", "👷 よろず検索（永遠に工事中）"])
         if st.button("スタート！"):
             if "Findings系" in option:
                 st.session_state["selected_app"] = "app1"
