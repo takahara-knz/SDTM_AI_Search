@@ -1,6 +1,9 @@
 import streamlit as st
 from app import app1, app2, app3  # ← appフォルダから読み込む！
 
+st.title("ふかふかStreamlit Cloudテスト")
+st.write("この画面が見えたら、Cloudは動いてるよ！")
+
 st.cache_data.clear()
 
 def main():
