@@ -27,7 +27,7 @@ def run_app():
         if not results.empty:
             st.success("候補が見つかったよ！")
             st.dataframe(
-                results[["Term", "Domain", "Type", "Variable", "Putpose", "Hint"]].reset_index(drop=True),
+                results[["Term", "Domain", "Type", "Variable", "Purpose", "Hint"]].reset_index(drop=True),
                 use_container_width=True
             )
         else:
