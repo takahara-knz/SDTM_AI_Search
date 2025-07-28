@@ -27,7 +27,7 @@ def run_app():
             st.success("候補が見つかったよ！")
             st.dataframe(
                 results[["Term", "Domain", "Type", "Variable", "Purpose", "Hint"]].reset_index(drop=True),
-                use_container_width=True
+                use_container_width=False
             )
         else:
             st.warning("候補が見つからなかったよ…")
