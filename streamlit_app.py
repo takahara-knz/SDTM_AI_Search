@@ -1,5 +1,5 @@
 import streamlit as st
-from app import app1, app2 #, app3  # ← appフォルダから読み込む！
+from app import app1, app2, app3  # ← appフォルダから読み込む！
 
 st.cache_data.clear()
 
