@@ -15,7 +15,6 @@ def run_app():
         return pd.read_excel(dic_path)
 
     dic = load_dictionary()
-    print(results.columns.tolist())
 
     # ✅ 検索入力
     user_input = st.text_input("検索語を入力してください（例：性別、生年月日）")
