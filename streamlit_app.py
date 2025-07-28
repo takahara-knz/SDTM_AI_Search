@@ -12,13 +12,15 @@ def main():
 
     # ✅ 表示制御
     if st.session_state["selected_app"] == "menu":
-        st.title("おしえてねこちゃんメニュー🐾")
-        option = st.radio("検索メニューを選択してください", ["1️⃣ Findings系(xxTESTCD&xxTEST)検索", "2️⃣ ドメイン検索（テスト中なので嘘を言うかも）", "3️⃣ よろず検索（永遠に工事中）"])
+        st.title("おしえてねこちゃんメニュー🐾 ※和訳はGoogle翻訳で、公式なものではありません")
+        option = st.radio("検索メニューを選択してください", ["1️⃣ Findings系(xxTESTCD&xxTEST)検索", "2️⃣ ドメイン検索（テスト中なので嘘を言うかも）", "3️⃣ ドメイン概要表示", "👷 よろず検索（永遠に工事中）"])
         if st.button("スタート！"):
             if "Findings系" in option:
                 st.session_state["selected_app"] = "app1"
-            elif "ドメイン" in option:
+            elif "ドメイン検索" in option:
                 st.session_state["selected_app"] = "app2"
+            elif "ドメイン概要" in option:
+                st.session_state["selected_app"] = "app3"
             else:
                 st.info("よろず検索は永遠に工事中です…👷")
             # st.experimental_rerun()  # ← 状態更新した直後に再描画！
@@ -28,6 +30,9 @@ def main():
 
     elif st.session_state["selected_app"] == "app2":
         app2.run_app()
+
+    elif st.session_state["selected_app"] == "app3":
+        st.info("いまつくってる")
 
     elif st.session_state["selected_app"] == "app3":
         st.info("ごめんニャ〜！よろず検索は永遠に工事中")
