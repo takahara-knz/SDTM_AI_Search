@@ -1,7 +1,7 @@
 import streamlit as st
 from app import app1, app2 #, app3  # ← appフォルダから読み込む！
 
-st.cache_cata.clear()
+st.cache_data.clear()
 
 def main():
     st.set_page_config(page_title="おしえてねこちゃんメニュー", layout="wide")
