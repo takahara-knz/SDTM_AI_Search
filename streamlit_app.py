@@ -32,7 +32,7 @@ def main():
         app2.run_app()
 
     elif st.session_state["selected_app"] == "app3":
-        st.info("いまつくってる")
+        app3.run_app()
 
     elif st.session_state["selected_app"] == "app3":
         st.info("ごめんニャ〜！よろず検索は永遠に工事中")
