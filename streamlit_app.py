@@ -4,7 +4,7 @@ from app import app1, app2, app3, app4  # ← appフォルダから読み込む�
 st.cache_data.clear()
 
 def main():
-    st.set_page_config(page_title="🐱おしえてねこちゃんメニュー", layout="wide")
+    st.set_page_config(page_title="おしえてねこちゃんメニュー", layout="wide")
 
     # ✅ 画面状態をセッションで保存
     if "selected_app" not in st.session_state:
@@ -12,7 +12,7 @@ def main():
 
     # ✅ 表示制御
     if st.session_state["selected_app"] == "menu":
-        st.title("おしえてねこちゃんメニュー🐾")
+        st.title("🐱おしえてねこちゃんメニュー🐾")
         st.write("※和訳はGoogle翻訳で、公式なものではありません")
         st.write("※ボタンを押しても動かない場合は、もう１回押してください")
         option = st.radio("検索メニューを選択してください", 
