@@ -4,7 +4,7 @@ from app import app1, app2, app3, app4  # ← appフォルダから読み込む�
 st.cache_data.clear()
 
 def main():
-    st.set_page_config(page_title="おしえてねこちゃんメニュー", layout="wide")
+    st.set_page_config(page_title="🐱おしえてねこちゃんメニュー", layout="wide")
 
     # ✅ 画面状態をセッションで保存
     if "selected_app" not in st.session_state:
