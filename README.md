@@ -5,7 +5,7 @@
 
 Streamlit を使って構築されており、**インストール不要・ブラウザだけで利用可能**です。
 
-コードは全部copilotさんが書いてくれました。ここのGitHubの持ち主はpython書けません。
+コードは全部copilotさんが書いてくれました。GitHubのここの持ち主はpythonもREADME.mdも書けません。
 
 ---
 
