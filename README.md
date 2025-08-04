@@ -57,6 +57,11 @@ streamlit run streamlit_app.py
 ```
 ---
 
+## 📦 配布・コピー時の注意点
+- /app フォルダと /data フォルダは run_main.py と同じ階層に配置してください。
+- Excelファイルのパスは data/data1.xlsx のように相対パスで記述されています。
+- 配布時は /app と /data を 忘れずに一緒にコピーしてください。
+
 ## 🔧 使用ライブラリ
 
 本ツールでは以下のPythonライブラリを使用しています：(説明はcopilotさん語録)
