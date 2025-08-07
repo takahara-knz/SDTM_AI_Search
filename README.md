@@ -57,6 +57,11 @@ streamlit run streamlit_app.py
 ```
 ---
 
+## 📦 配布・コピー時の注意点
+- /app フォルダと /data フォルダは run_main.py と同じ階層に配置してください。
+- Excelファイルのパスは data/data1.xlsx のように相対パスで記述されています。
+- 配布時は /app と /data を 忘れずに一緒にコピーしてください。
+
 ## 🔧 使用ライブラリ
 
 本ツールでは以下のPythonライブラリを使用しています：(説明はcopilotさん語録)
@@ -65,3 +70,10 @@ streamlit run streamlit_app.py
 - **scikit-learn**：AI検索（類似度計算）に使用される思考エンジン  
 - **janome**：日本語の分かち書きを可能にするテキスト職人  
 - **openpyxl**：Excelファイルの読込を裏で支える助演俳優（`pandas.read_excel()` の内部依存）
+
+---
+
+## 🐱 ねこちゃんからのひとこと 🐾
+
+このREADMEを読んでくれてありがとう。  
+ツールはまだまだ工事中だけど、あなたのおしごとがちょっとでも楽になりますように🐱✨
