@@ -18,7 +18,7 @@ def main():
         option = st.radio("検索メニューを選択してください", 
                           ["1️⃣ Findings系(xxTESTCD&xxTEST)Terminology検索", 
                            "2️⃣ ドメイン検索（テスト中なので嘘を言うかも）", 
-                           "3️⃣ ドメイン概要表示（SDTMIG V3.3）", 
+                           "3️⃣ ドメイン概要表示（SDTMIG V3.3）→非公開", 
                            "4️⃣ Findings系(xxTESTCD&xxTEST)以外のTerminology検索（SDTMIG V3.3）" ,
                            "👷 よろず検索（永遠に工事中🙏）"])
         if st.button("スタート！"):
@@ -27,7 +27,7 @@ def main():
             elif "ドメイン検索" in option:
                 st.session_state["selected_app"] = "app2"
             elif "ドメイン概要" in option:
-                st.session_state["selected_app"] = "app3"
+                st.info("このメニューは非公開です🙇‍♀️")
             elif "Findings系(xxTESTCD&xxTEST)以外のTerminology" in option:
                 st.session_state["selected_app"] = "app4"
             else:
@@ -40,8 +40,8 @@ def main():
     elif st.session_state["selected_app"] == "app2":
         app2.run_app()
 
-    elif st.session_state["selected_app"] == "app3":
-        app3.run_app()
+#    elif st.session_state["selected_app"] == "app3":
+#        app3.run_app()
 
     elif st.session_state["selected_app"] == "app4":
         app4.run_app()
