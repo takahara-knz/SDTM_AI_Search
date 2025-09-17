@@ -30,9 +30,6 @@ https://sdtmaisearch.streamlit.app/
 - 項目名（例えば「生年月日」など）を入れて、どのドメインかを検索
 - ドメインの他、変数名が決まっていれば表示、ほかTipsなど
 
-3️⃣ ドメイン概要表示（SDTMIG V3.3）
-- ドメインを指定したら、概要や作成単位、変数表を表示
-
 4️⃣ Findings系(xxTESTCD&xxTEST)以外のTerminology検索（SDTMIG V3.3）
 - メニューの1️⃣以外のTerminology（例えばFREQなど）の検索
 - TF-IDF + コサイン類似度による類似語ランキング、完全一致、部分一致から選択可能
