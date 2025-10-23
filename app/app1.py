@@ -8,7 +8,7 @@ def filter_by_similarity(df, keyword, top_n=None):
     texts = (
         df["xxTESTCD"].fillna("") + " " +
         df["xxTEST"].fillna("") + " " +
-        df["xxTEST-J"].fillna("")
+        df["xxTEST_J"].fillna("")
     )
     vectorizer = TfidfVectorizer()
     tfidf_matrix = vectorizer.fit_transform(texts.tolist() + [keyword])
@@ -58,7 +58,7 @@ def run_app():
         # 🔹 表示列の順番調整
         preferred_columns = [
             "Domain", "Code", "xxTESTCD", "xxTEST",
-            "xxTEST-J", "CDISC Synonym(s)-J", "CDISC Definition-J", "NCI Preferred Term-J",
+            "xxTEST_J", "CDISC Synonym(s)_J", "CDISC Definition_J", "NCI Preferred Term_J",
             "CDISC Synonym(s)", "CDISC Definition", "NCI Preferred Term"
         ]
         display_columns = [col for col in preferred_columns if col in results.columns]
