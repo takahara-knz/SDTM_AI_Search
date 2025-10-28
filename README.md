@@ -31,7 +31,7 @@ https://sdtmaisearch.streamlit.app/
 - ドメインの他、変数名が決まっていれば表示、ほかTipsなど
 
 3️⃣ ドメイン概要表示（SDTMIG V3.3）
-- ドメインを指定したら、概要や作成単位、変数表を表示
+- 著作権上の問題で非公開
 
 4️⃣ Findings系(xxTESTCD&xxTEST)以外のTerminology検索（SDTMIG V3.3）
 - メニューの1️⃣以外のTerminology（例えばFREQなど）の検索
@@ -65,7 +65,7 @@ streamlit run streamlit_app.py
 ## 🔧 使用ライブラリ
 
 本ツールでは以下のPythonライブラリを使用しています：(説明はcopilotさん語録)
-- **streamlit**：アプリのインターフェースを構築するふかふか舞台演出ツール  
+- **streamlit**：アプリのインターフェースツール  
 - **pandas**：Excelデータの読込や加工を担当するデータ職人  
 - **scikit-learn**：AI検索（類似度計算）に使用される思考エンジン  
 - **janome**：日本語の分かち書きを可能にするテキスト職人  
