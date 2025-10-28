@@ -29,7 +29,7 @@ def main():
                            "4️⃣ Findings系(xxTESTCD&xxTEST)以外のTerminology検索（SDTMIG V3.3）" ,
                            "👷 よろず検索（永遠に工事中🙏）"])
         st.markdown(lictxt, unsafe_allow_html=True)
-    if st.button("スタート！"):
+        if st.button("スタート！"):
             if "Findings系(xxTESTCD&xxTEST)Terminology" in option:
                 st.session_state["selected_app"] = "app1"
             elif "ドメイン検索" in option:
