@@ -13,7 +13,7 @@ def main():
     # ✅ 表示制御
     if st.session_state["selected_app"] == "menu":
         st.title("🐱おしえてねこちゃんメニュー🐾")
-        st.write("※Terminologyのデータは、米国国立がん研究所（NCI）が以下のページで公開しているCDISC Terminology（SDTM）を加工し、Google翻訳結果を付加したものです。\n　出典：https://www.cancer.gov/about-nci/organization/cbiit/vocabulary/cdisc")
+        st.write("※Terminologyのデータは、米国国立がん研究所（NCI）が以下のページで公開しているCDISC Terminology（SDTM）を加工し、Google翻訳結果を付加したものです。\n - 出典：https://www.cancer.gov/about-nci/organization/cbiit/vocabulary/cdisc")
         st.write("　The National Cancer Institute (NCI) does not endorse this translation and no endorsement by NCI should be inferred.")
         st.write("※ボタンを押しても動かない場合は、もう１回押してください")
         option = st.radio("検索メニューを選択してください", 
@@ -51,5 +51,6 @@ def main():
         st.info("ごめんニャ〜！よろず検索は永遠に工事中")
 
 main()
+
 
 
