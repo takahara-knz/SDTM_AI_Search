@@ -10,12 +10,17 @@ def main():
     if "selected_app" not in st.session_state:
         st.session_state["selected_app"] = "menu"
 
+    # ✅ ライセンス表示テキスト
+    lictxt  =   ("※Terminologyのデータは、米国国立がん研究所（NCI）が以下のページで公開しているCDISC Terminology（SDTM）を加工し、Google翻訳結果を付加したものです。"
+                 "<br>"
+                 "　出典：https://www.cancer.gov/about-nci/organization/cbiit/vocabulary/cdisc"
+                 "<br>"
+                 "　The National Cancer Institute (NCI) does not endorse this translation and no endorsement by NCI should be inferred."
+                )
+
     # ✅ 表示制御
     if st.session_state["selected_app"] == "menu":
         st.title("🐱おしえてねこちゃんメニュー🐾")
-        st.write("※Terminologyのデータは、米国国立がん研究所（NCI）が以下のページで公開しているCDISC Terminology（SDTM）を加工し、Google翻訳結果を付加したものです。")
-        st.write("- 出典：https://www.cancer.gov/about-nci/organization/cbiit/vocabulary/cdisc")
-        st.write("- The National Cancer Institute (NCI) does not endorse this translation and no endorsement by NCI should be inferred.")
         st.write("※ボタンを押しても動かない場合は、もう１回押してください")
         option = st.radio("検索メニューを選択してください", 
                           ["1️⃣ Findings系(xxTESTCD&xxTEST)Terminology検索", 
@@ -23,7 +28,8 @@ def main():
                            "3️⃣ ドメイン概要表示（SDTMIG V3.3）→非公開", 
                            "4️⃣ Findings系(xxTESTCD&xxTEST)以外のTerminology検索（SDTMIG V3.3）" ,
                            "👷 よろず検索（永遠に工事中🙏）"])
-        if st.button("スタート！"):
+        st.markdown(lictxt, unsafe_allow_html=True)
+    if st.button("スタート！"):
             if "Findings系(xxTESTCD&xxTEST)Terminology" in option:
                 st.session_state["selected_app"] = "app1"
             elif "ドメイン検索" in option:
