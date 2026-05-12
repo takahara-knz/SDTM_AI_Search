@@ -37,8 +37,8 @@ https://sdtmaisearch.streamlit.app/
 - メニューの1️⃣以外のTerminology（例えばFREQなど）の検索
 - TF-IDF + コサイン類似度による類似語ランキング、完全一致、部分一致から選択可能
 
-👷 よろず検索（永遠に工事中🙏）
-- 今のところ実装の目途なし
+👷 よろず検索
+- NotebookLM 環境構築で、よろず検索ができます → https://github.com/takahara-knz/SDTM_NotebookLM
 
 ---
 
