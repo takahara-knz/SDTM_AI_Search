@@ -27,7 +27,7 @@ def main():
                            "2️⃣ ドメイン検索（テスト中なので嘘を言うかも）", 
                            "3️⃣ ドメイン概要表示（SDTMIG V3.3）→非公開", 
                            "4️⃣ Findings系(xxTESTCD&xxTEST)以外のTerminology検索（SDTMIG V3.3）" ,
-                           "👷 よろず検索（永遠に工事中🙏）"])
+                           "👷 よろず検索 → NotebookLMで環境構築をお勧め"])
         st.markdown(lictxt, unsafe_allow_html=True)
         if st.button("スタート！"):
             if "Findings系(xxTESTCD&xxTEST)Terminology" in option:
@@ -39,7 +39,7 @@ def main():
             elif "Findings系(xxTESTCD&xxTEST)以外のTerminology" in option:
                 st.session_state["selected_app"] = "app4"
             else:
-                st.info("よろず検索は永遠に工事中です…👷")
+                st.info("NotebookLM の環境構築はこちら → https://github.com/takahara-knz/SDTM_NotebookLM")
             # st.experimental_rerun()  # ← 状態更新した直後に再描画！
 
     elif st.session_state["selected_app"] == "app1":
