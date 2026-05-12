@@ -55,7 +55,7 @@ def main():
         app4.run_app()
 
     elif st.session_state["selected_app"] == "app5":
-        st.info("ごめんニャ〜！よろず検索は永遠に工事中")
+        st.info("NotebookLM の環境構築はこちら → https://github.com/takahara-knz/SDTM_NotebookLM")
 
 main()
 
